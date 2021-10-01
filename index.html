@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing Circle</title>
+    <button onclick ="caleb()" >Change Color</button>
+    <button onclick ="lucas()" >Change Size</button>
+    <div id = "circle"></div>
+</head>
+
+<body>
+     
+    
+    <style>
+
+        body{
+            background-color:honeydew;
+        }
+
+        #circle{
+            width: 500px;
+            height: 500px;
+            background-color:greenyellow;
+            margin:auto;
+            border-radius: 50%;
+        
+        }
+    </style>
+    <script>
+        function caleb(){
+            
+            var randomColor = Math.floor(Math.random()*16777215).toString(16);
+            var randomColor2 = Math.floor(Math.random()*16777215).toString(16);
+            var element = document.getElementById("circle");
+            document.body.style.backgroundColor = "#" + randomColor2;
+            element.style.backgroundColor = "#" + randomColor;
+           
+            
+        }
+
+        function lucas(){
+            var ballSizeRandom = Math.floor(Math.random() * 800) + 1;
+            var element = document.getElementById("circle");
+            element.style.width = ballSizeRandom + "px";
+            element.style.height = ballSizeRandom + "px";
+        }   
+        </script>
+</body>
+</html>
